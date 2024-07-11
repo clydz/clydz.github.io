@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+    </script>
+
+    <style>
+
+        .radio-label {
+            margin-right: 20px; /* Adjust the margin as needed */
+        }
+        button {
+            transition: opacity 2s ease;
+        }
+
+        .invisible {
+            opacity: 0;
+        }
+
+        body {
+            font-family: "Patrick Hand", cursive;
+            font-weight: 400;
+            font-style: normal;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Ensure the body takes up the full viewport height */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-image: url('bg.png');
+            text-shadow: 2px 2px grey;
+            background-size: cover;
+        }
+        #four {
+            max-width: 44%
+        }
+
+        img {
+            max-width: 50%;
+            
+        }
+
+        .header-image {
+            max-width: 100%;
+            height: auto;
+
+        }
+
+        .footer-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            background-image: url('background.png');
+            background-repeat: no-repeat;
+            background-size:contain;
+
+            padding: 30px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;           
+        }
+    
+        h1 {
+            font-family: "Patrick Hand", cursive;
+            font-weight: 400;
+            font-size: 36px;
+        }
+
+        h2 {
+            font-family: "Patrick Hand", cursive;
+            font-weight: 400;
+            font-size: 30px;
+            color: rgb(#713806);
+        }
+
+        h3 {
+            font-family: "Patrick Hand", cursive;
+            font-weight: 400;
+            font-size: 24px;
+            color: rgb(#713806);
+        }
+    
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+    
+        .interactive-section {
+            padding-bottom: 100px;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+    
+        .kaya-toast {
+
+            transition: transform 0.3s ease;
+        }
+    
+        .kaya-toast:hover {
+            transform: scale(1.1);
+        }
+    
+        button {
+            background-color: transparent;
+            color: transparent;
+            border: none;
+        }
+        #coffeeForm {
+            display: none;
+            background-color: #eee7d7;
+        }
+        #myModal {
+            text-shadow: 0px 0px;
+            display: none;
+            align-items: center;
+            justify-content: space-between
+        }
+        #hide {
+            margin: 0px 120px;
+        }
+</style>
+
+</head>
+<body>
+    <header>
+        <img src="header.png" class="header-image">
+    </header>
+
+    <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+        <h1><img src="404(2).png" id="four"></h1>
+    </div>
+    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+        <h2>Uh-oh, this page isn't brewing anymore.<h2>
+        <button class=" w3-button w3-round w3-margin-top w3-margin-bottom" style="background-color:#b7312c; color: white;" onclick="window.location.href='https://www.funtoast.com.sg/';">Back to Home</button>
+    </div>
+    <div data-aos="fade-up" data-aos-easing="linear" data-aos-delay="2000" data-aos-duration="2500">
+    <h3>Or, keep scrolling!</h3>
+    </div>
+
+    <div class="container" data-aos="flip-up" data-aos-duration="2000" style="text-shadow: none">
+            <h3>Since you're here, let's have some <img src="FUN.png" style="width: 60px; height: auto;">!</h3>
+            <h1>Click the <b style="text-shadow: 1px 1px black;">Fun Toast Set</b> below to see what Kopi suits you!</h1>
+            <div class="interactive-section">
+                <div class="kaya-toast" onclick="document.getElementById('coffeeForm').style.display='block'">
+                <button id="hide"><img src="Kaya_toast.png" alt="Kaya Toast""></button>
+                </div>
+            </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="coffeeForm" class="container" style="background-color: #eee7d7; background-image: none;">
+        <div id="mood">
+            <h2>What mood are you in?</h2>
+            <label class="radio-label" style="text-shadow: 0px 0px">
+                <input type="radio" name="mood" value="classic" required> Classic
+            </label>
+            <label class="radio-label" style="text-shadow: 0px 0px">
+                <input type="radio" name="mood" value="adventurous"> Adventurous
+            </label>
+        </div>
+
+        <div id="thickness">
+            <h2>How thick do you like your drinks?</h2>
+            <label class="radio-label" style="text-shadow: 0px 0px">
+                <input type="radio" name="thickness" value="normal" required> Normal
+            </label>
+            <label class="radio-label" style="text-shadow: 0px 0px">
+                <input type="radio" name="thickness" value="thin"> Thin
+            </label>
+            <label class="radio-label" style="text-shadow: 0px 0px">
+                <input type="radio" name="thickness" value="thick"> Thick
+            </label>
+        </div>
+
+        <button class=" w3-button w3-round w3-margin-top w3-margin-bottom" style="background-color: #b7312c; color: white" onclick="openModal()">Give me a recommendation</button>
+    </div>
+    <div id="myModal" class="w3-modal" style="color: #b7312c;">
+        <div class="w3-modal-content">
+            <header class="w3-container" style="color: maroon;">
+                <span onclick="closeModal()" class="w3-button w3-display-topright">&times;</span>
+                <h2>Your Coffee Recommendation</h2>
+            </header>
+            <div id="modalBody" class="w3-container">
+
+
+            </div>
+        </div>
+    </div>
+ 
+    <footer>
+            <img src="footer.png" class="footer-image">
+    </footer>
+
+
+
+    <script>
+        AOS.init();
+        document.getElementById("hide").addEventListener("click", function() {
+            this.classList.add("invisible");
+        });
+        document.getElementById('hide').addEventListener('click', function() {
+        document.querySelector('.container[data-aos="flip-up"]').style.display = 'none';
+        });
+        function openModal() {
+            // Get selected radio button values
+            var mood = document.querySelector('input[name="mood"]:checked');
+            var thickness = document.querySelector('input[name="thickness"]:checked');
+
+            // Validate if both mood and thickness are selected
+            if (!mood || !thickness) {
+                alert('Please select both mood and thickness preferences.');
+                return;
+            }
+
+            // Construct recommendation based on selected values
+            var recommendation = getRecommendation(mood.value, thickness.value);
+            var recommendationText = recommendation;
+                // Determine image filename based on recommendation
+            var imageFileName = recommendation + '.png';
+
+            var addon = document.getElementById('recommendation');
+            let output = ' '
+
+            if (recommendation === 'Kopi') {
+                output = 'Combines strong, rich coffee with sweetened condensed milk. This beloved local drink offers a creamy and bold flavor, enjoyed hot or iced, perfect for any time of day.';
+            } else if (recommendation === 'Kopi-O') {
+                output = 'A strong, black coffee served without milk but sweetened with sugar.'
+            } else if (recommendation === 'Kopi-C') {
+                output = 'A robust coffee made with evaporated milk and sugar, offering a creamy and bold flavor profile.'
+            } else if (recommendation === 'Kopi-Gao') {
+                output = 'A strong coffee served thick and potent with condensed milk and sugar, offering a bold and intense flavor.'
+            } else if (recommendation === 'Yuan-Yang') {
+                output = 'A popular Hong Kong beverage that blends strong coffee with sweetened milk tea, creating a unique and harmonious flavor combination.'
+            } else if (recommendation === 'Kopi-O-Kosong') {
+                output = 'A traditional black coffee served without sugar or milk, known for its strong and pure coffee flavor.'
+            };
+            
+            addon = output
+            var modalContent = '<img src="'+imageFileName+'" alt="' + recommendation + '" style="max-width: 30%; display: block; margin: 0 auto;">'; modalContent += '<h1>' + recommendationText + '</h1>' + '<p>' + addon + '</p>'
+
+            var modalBody = document.getElementById('modalBody');
+            modalBody.innerHTML = modalContent;
+
+
+            // Open the modal
+            var modal = document.getElementById('myModal');
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            // Close the modal
+            var modal = document.getElementById('myModal');
+            modal.style.display = 'none';
+        }
+
+        function getRecommendation(mood, thickness) {
+            // Define your recommendations based on mood and thickness
+            var recommendations = {
+                'classic_normal': 'Kopi',
+                'classic_thin': 'Kopi-O',
+                'adventurous_thick': 'Kopi-C',
+                'classic_thick': 'Kopi-Gao',
+                'adventurous_normal': 'Yuan-Yang',
+                'adventurous_thin': 'Kopi-O-Kosong'
+            };
+
+            console.log(recommendations[mood+"_"+thickness]);
+            // Return recommendation or default message if key not found
+            return recommendations[mood+"_"+thickness] || 'No recommendation found.';
+        }
+    </script>
+
+</body>
+</html>
